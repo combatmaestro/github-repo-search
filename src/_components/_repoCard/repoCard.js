@@ -3,16 +3,16 @@ import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText } from 'reac
 
 const RepoCard = ({ repo }) => {
     const truncateDescription = (description) => {
-      if (description) {
-        const words = description.split(' ');
-        if (words.length > 30) {
-          return words.slice(0, 30).join(' ') + '...';
+        if (description) {
+          const words = description.split(' ');
+          if (words.length > 30) {
+            return words.slice(0, 30).join(' ') + '...';
+          }
+          return description;
         }
-        return description;
-      }
-      return '';
-    };
-  
+        return 'N.A';
+      };
+      
     return (
       <div style={{
         width: '200px',
